@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/2005/Atom">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona Główna</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link rel="stylesheet"
+          th:href="@{/styleindex.css}">
+</head>
+<body>
+<h1>Testy na prawo jazdy</h1>
+
+<form>
+    <input style="width: 300px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px; #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: #ffff00; color: #000; border-radius: 10px; border: 1px solid #999; font-size: 110%;" type="button" value="Kategoria A" onclick="window.location.href='/tests/2/play'" />
+</form>
+<form>
+    <input style="width: 300px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px; #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: #ffff00; color: #000; border-radius: 10px; border: 1px solid #999; font-size: 110%;" type="button" value="Kategoria B" onclick="window.location.href='/tests/1/play'" />
+</form>
+<p th:text="${message}" style="color: white"></p>
+<a href="/logout"><p>logout</p></a> <br>
+
+</body>
+</html>

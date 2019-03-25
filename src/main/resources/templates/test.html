@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Test</title>
+    <link rel="stylesheet"
+          th:href="@{/style.css}">
+</head>
+<body>
+<h1 th:text="${test.name}"></h1>
+
+<h3 th:if="${question}"
+    th:text="${question.content}"></h3>
+
+<h2 th:if="${message}"
+    th:text="${message}"></h2>
+
+<form th:if =${question}
+      th:action="@{|/tests/${id}/continue|}" method="get">
+    <button style="width: 400px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: #ff9cd6; color: #000; border-radius: 10px; border: 1px solid #999; font-size: 100%;" name="correct" value="1">TAK</button>
+    <button style="width: 400px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: #ff9cd6; color: #000; border-radius: 10px; border: 1px solid #999; font-size: 100%;" name="correct"  value="0">NIE</button>
+
+
+
+
+    <!--<select name="correct">-->
+        <!--<option value="1">TAK</option>-->
+        <!--<option value="0">NIE</option>-->
+
+    <!--</select>-->
+    <!--<input type="submit" value="Następne">-->
+
+</form>
+<div class="footer">
+<!--<form>-->
+    <!--<input style="width: 400px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: #79ff4e; color: #000; border-radius: 10px; border: 1px solid #999; font-size: 100%;" type="submit" value="Nastepne" />-->
+<!--</form>-->
+    <form>
+        <input style="width: 400px; padding: 20px; cursor: pointer; box-shadow: 6px 6px 5px #999; -webkit-box-shadow: 6px 6px 5px #999; -moz-box-shadow: 6px 6px 5px #999; font-weight: bold; background: #52ff45; color: #000; border-radius: 10px; border: 1px solid #999; font-size: 100%;" type="button" value="Powrot do Strony Głównej" onclick="window.location.href='/'" />
+
+    </form>
+</div>
+
+</body>
+
+</html>
